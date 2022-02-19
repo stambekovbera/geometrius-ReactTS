@@ -1,0 +1,133 @@
+
+.left__sidebar {
+  position: fixed;
+  left: 0;
+  z-index: 10;
+  opacity: 0;
+  transform: translate(-2000px, 0);
+  transition: all 0.3s linear;
+  background-color: #fff;
+  overflow: auto;
+  width: 100%;
+  padding: 20px 0;
+}
+
+.left__sidebar._active {
+  top: 215px;
+  opacity: 1;
+  visibility: visible;
+  transform: translate(0, 0);
+}
+
+.left__sidebar._sizing {
+  transform: translate(-2000px, 0);
+  transition: all 0.3s linear;
+}
+
+.left__sidebar._sizing._active {
+  top: 145px;
+  transform: translate(0, 0);
+  transition: all 0.3s linear;
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .left__sidebar._active {
+    top: 145px;
+  }
+  .sidebar__title {
+    font-size: 35px;
+  }
+  .sidebar__menu {
+    & li {
+      margin: 5px 0 0 0;
+    }
+
+    & li:first-child {
+      margin: 10px 0 0 0;
+    }
+  }
+  .sidebar__menu li:last-child {
+    margin: 5px 0 10px 0;
+  }
+}
+
+@media (min-width: 650px) and (max-width: 767px) {
+  .left__sidebar._sizing._active {
+    top: 105px;
+    transform: translate(0, 0);
+    transition: all 0.3s linear;
+  }
+  .left__sidebar._active {
+    top: 105px;
+  }
+  .sidebar__title {
+    font-size: 25px;
+  }
+  .sidebar__menu {
+    & li {
+      height: 30px;
+      margin: 5px 0 0 0;
+    }
+
+    & li:first-child {
+      margin: 5px 0 0 0;
+    }
+  }
+  .sidebar__menu li:last-child {
+    margin: 5px 0 5px 0;
+  }
+}
+
+@media (min-width: 481px) and (max-width: 649px) {
+  .left__sidebar._active {
+    top: 55px;
+  }
+
+  .left__sidebar._sizing._active {
+    top: 55px;
+  }
+
+  .sidebar__title {
+    font-size: 25px;
+  }
+  .sidebar__menu {
+    & li {
+      height: 30px;
+      margin: 5px 0 0 0;
+    }
+
+    & li:first-child {
+      margin: 5px 0 0 0;
+    }
+  }
+  .sidebar__menu li:last-child {
+    margin: 5px 0 5px 0;
+  }
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+  .left__sidebar._active {
+    top: 55px;
+  }
+
+  .left__sidebar._sizing._active {
+    top: 55px;
+  }
+
+  .sidebar__title {
+    font-size: 25px;
+  }
+  .sidebar__menu {
+    & li {
+      height: 30px;
+      margin: 5px 0 0 0;
+    }
+
+    & li:first-child {
+      margin: 5px 0 0 0;
+    }
+  }
+  .sidebar__menu li:last-child {
+    margin: 5px 0 5px 0;
+  }
+}
